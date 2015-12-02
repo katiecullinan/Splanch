@@ -1,0 +1,118 @@
+
+* {
+	box-sizing:border-box;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family:'Lato', Futura, sans-serif;
+}
+
+p {
+	font-family:'Lato', Futura, sans-serif;}
+
+
+/*Home page*/
+
+#home {
+	background-color: #5885E8;
+	width: 100%;
+	min-height: 100%;
+	 background-attachment: fixed;
+	 margin: 0;
+
+}	 
+
+
+
+.header {
+	background-color: white;
+	text-align: center;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	margin: 0;
+
+}
+
+.header p{
+	margin-top: 0;
+	padding: 1em;
+	font-size: 30px;
+	color: red;
+}
+
+
+.scoreboard {
+	width: 70%;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.scoretable {
+	margin: 0 auto;
+	width: 100%;
+	padding: 2%;
+	
+}
+
+.game, .game1{
+	width: 75%;
+}
+
+.score, .score1 {
+	width: 25%;
+	margin-left: 10px;
+}
+
+
+.game1, .score1 {
+	border-bottom: 2px solid gray;
+	font-size: 2em;
+	text-transform: uppercase;
+
+}
+
+.game, .score {
+	border-bottom: 1px solid gray;
+}
+
+.add-button {
+	width: 300px;
+	border-radius: 10px;
+	background-color: gray;
+	color: white;
+	text-transform: uppercase;
+	margin: 10px auto;
+	box-shadow: 2px 2px 4px #2D2D2D;
+}
+
+.add-button p{
+	padding: 10px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 300;
+
+}
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+

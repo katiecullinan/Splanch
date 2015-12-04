@@ -21,6 +21,7 @@
 	<!-- Enable responsive layouts; tell browsers not to shrink pages to fit small screens -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	
 
 	<!-- Load styles -->
@@ -31,6 +32,36 @@
 window.moveTo(0, 0);
 window.resizeTo(screen.width, screen.height);
 }
+	</script>
+
+
+
+
+
+<script>
+
+$(function(){
+	$('#getvalue').click(function(){
+        // Get the text area value
+        var textarea_value = $('#textarea').val();
+        
+        // Get a jQuery object of the template html
+        var templateHolder = $($('#template3').html());
+        
+        // Put the text area text inside of the template's <p> tag 
+        // Use .html() to overwrite the old content with the new 
+        // content every time
+        templateHolder.find('p').html(textarea_value);
+        
+        // Get a reference to the <ul> element
+		var $btext = $('.popupbtext');
+        
+        $btext.append(templateHolder);
+        
+      	});	
+
+	});
+
 	</script>
 
 </head>
@@ -44,59 +75,67 @@ window.resizeTo(screen.width, screen.height);
 
 	</div>
 
-	<div class="scoreboard">
+	<!--<div class="score-number">
 
-		<table class="scoretable">
+		<p>
+			
+		</p>
 
-			<tr>
-				<td class="game1">Game</td>
-				<td class="score1">Score</td>
-			</tr>
-
-
-			<tr>
-				<td class="game"><p>Tabletop Quidditch: Shoot the ball through 3 hoops set up in front of the Splanch board</p>
-					<p> 1 minute</p></td>
-				<td class="score">205</td>
-			</tr>
-
-			<tr>
-				<td class="game"><p>Tabletop Quidditch: Shoot the ball through 3 hoops set up in front of the Splanch board</p>
-					<p> 1 minute</p></td>
-				<td class="score">205</td>
-			</tr>
-
-			<tr>
-				<td class="game"><p>Tabletop Quidditch: Shoot the ball through 3 hoops set up in front of the Splanch board</p>
-					<p> 1 minute</p></td>
-				<td class="score">205</td>
-			</tr>
-			<tr>
-				<td class="game"><p>Tabletop Quidditch: Shoot the ball through 3 hoops set up in front of the Splanch board</p>
-					<p> 1 minute</p></td>
-				<td class="score">205</td>
-			</tr>
-			<tr>
-				<td class="game"><p>Tabletop Quidditch: Shoot the ball through 3 hoops set up in front of the Splanch board</p>
-					<p> 1 minute</p></td>
-				<td class="score">205</td>
-			</tr>
-		</table>
-	
-	</div>
+	</div>	
 
 	<div class = "add-button">
 
-		<a href="page2.html" <p>Add Game</p></a>
+		Reset
 		</div>
 
+	-->
+
+
+	<div class="scoreboard">
+
+	<p class="scoreboard-p">Describe the game you played and record your score.</p>	
 
 
 
+
+
+
+
+
+<textarea id="textarea"></textarea>
+<br/>
+<button class="submit-button" id="getvalue"> submit</button>
+ 
+
+	<div class="score-img">
+		<img src="css/scores.png"/>
+</div>
+       
+
+<div class="scoreboard-record">
+	<h1> Game and Score</h1>
+	<hr />
+    <ul  class="popupbtext">
+        <li>
+            <p  class="info1">How many times can you hit the smallest box in 30 seconds | 250 points </p>
+        </li>
+    </ul>
+
+    
+<script id="template3" type="text/template">
+     <li>
+         <p  class="info1 show-textarea-value"></p>
+     </li>
+</script>
+
+
+</div>
 
 
 
 <body onload="fullScreen();">
 
 </body>
+
+
 </html>
